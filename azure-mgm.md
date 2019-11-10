@@ -1,49 +1,60 @@
-## k8s-env-prep Ubuntu (18)
+# k8s-env-prep Ubuntu (18)
 Steps for k8s managment cosole preparation
 
-## Managment console - Azure
+# Managment console - Azure
 
-## Docker
+# Docker
 
-# Docker dep instalation
 
+<b> Docker dep instalation</b>  
+  
 sudo apt-get install -y \  
     apt-transport-https \  
     ca-certificates \  
     curl \  
     software-properties-common  
 
-# Download and add Docker PGP key
+<b>Download and add Docker PGP key</b>  
+  
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  
 
-# Verify the fingerprint.
+<b>Verify the fingerprint</b>  
+  
 sudo apt-key fingerprint 0EBFCD88  
 
-# Add the `stable` channel's Docker upstream repository
+<b>Add the `stable` channel's Docker upstream repository</b> 
+  
 sudo add-apt-repository \  
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \  
    $(lsb_release -cs) \  
    stable"  
    
-# Install Docker CE.
+<b>Install Docker CE </b>  
+  
 sudo apt-get update -y
 sudo apt-get install -y docker-ce
  
-# Allow your user without root
+<b>Allow your user without root</b>  
+  
 sudo usermod -aG docker $USER  
 
-# Start and autostart docker
+<b>Start and autostart docker</b>  
+  
 sudo systemctl start docker  
 sudo systemctl enable dock  
 
-##kubectl
-# Download kubectl
+# kubectl
+
+<b> Download kubectl</b>  
+  
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl  
 
-# Make the kubectl binary executable
+<b>Make the kubectl binary executable</b>  
+  
 chmod +x ./kubectl  
 
-# Move the binary in to your PATH
+<b>Move the binary in to your PATH</b>  
+  
 sudo mv ./kubectl /usr/local/bin/kubectl
 
 
