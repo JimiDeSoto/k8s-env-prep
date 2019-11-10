@@ -25,9 +25,9 @@ sudo add-apt-repository \
 sudo apt-get update -y
 sudo apt-get install -y docker-ce
  
-# Allow your user to access the Docker CLI without needing root access.
+# Allow your user without root
 sudo usermod -aG docker $USER  
 
-#Start and autostart Docker  
+# Start and autostart docker
 sudo systemctl start docker  
 sudo systemctl enable dock  
