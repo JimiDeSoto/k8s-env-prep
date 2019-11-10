@@ -1,5 +1,7 @@
-# k8s-env-prep Ubuntu (18)
-# Managment console Azure
+## k8s-env-prep Ubuntu (18)
+## Managment console Azure
+
+## Docker
 Steps for k8s managment cosole preparation
 
 # Docker dep instalation
@@ -32,3 +34,15 @@ sudo usermod -aG docker $USER
 # Start and autostart docker
 sudo systemctl start docker  
 sudo systemctl enable dock  
+
+##kubectl
+# Download kubectl
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl  
+
+# Make the kubectl binary executable
+chmod +x ./kubectl  
+
+# Move the binary in to your PATH
+sudo mv ./kubectl /usr/local/bin/kubectl
+
+
