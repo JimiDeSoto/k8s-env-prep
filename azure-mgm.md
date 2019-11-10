@@ -31,7 +31,7 @@ sudo add-apt-repository \
    
 <b>Install Docker CE </b>  
   
-sudo apt-get update -y
+sudo apt-get update -y  
 sudo apt-get install -y docker-ce
  
 <b>Allow your user without root</b>  
