@@ -1,3 +1,4 @@
+#From https://github.com/PoznajKubernetes/bash-theme/blob/master/poznajkubernetes.sh
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.pk8s-bash/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
