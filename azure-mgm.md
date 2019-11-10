@@ -57,4 +57,9 @@ chmod +x ./kubectl
   
 sudo mv ./kubectl /usr/local/bin/kubectl
 
+# Command prompt
+<b> Install kube-ps1</b>  
+git clone https://github.com/jonmosco/kube-ps1.git .kube-ps1
+
+
 
