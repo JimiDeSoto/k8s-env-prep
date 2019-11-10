@@ -63,6 +63,7 @@ git clone https://github.com/jonmosco/kube-ps1.git .kube-ps1
 git clone https://github.com/JimiDeSoto/k8s-env-prep.git .pk8s-bash  
 source ~/.pk8s-bash/pk8s.sh  
 
-
+# azure cli
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash  
 
 
